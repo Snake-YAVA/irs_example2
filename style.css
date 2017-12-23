@@ -1,23 +1,19 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
 .header {
-	position: relative;			/* относительное позиционирование */
-	border: 1px dashed blue;	/* граница */
-	margin: 10px;				/* внешние отступы */
+	position: relative;			/* относительное позиционирование */	
 	height: 250px;				/* высота блока */
     background: url(https://orig00.deviantart.net/424a/f/2016/027/e/2/wallpaper_geometric_color_22_2k_uhd_by_airworldking-d9pj983.png);	
 }
 
-.middle {
-	border: 1px dashed blue;	/* граница */
-	margin: 10px;				/* внешние отступы */
-}
 ul.main-menu {					/* главное меню */
 	position: absolute;			/* абсолютное позиционирование */
     bottom: 10px;				/* позиция снизу */
 }
 ul.main-menu li {				/* ко всем элементам списка */
     display: inline-block;		/* выстроит элементы горизонтально*/
-    margin-left: 20px;			/* внешний отступ слева */
-    margin-right: 20px;			/* внешний отступ справа */
 }
 ul.main-menu li a {				/* */
     background-color: white;	/* цвет фона */
@@ -38,16 +34,27 @@ img.logo {						/* логотип */
     margin-left: -89px;			/* отрицательный отсуп*/
 }
 
+
+.middle {
+	width: 100%;
+	display: table; 				/* Задаем табличное отображение */
+}
 .left-block {
-	border: 1px dashed blue;	/* граница */
-	margin: 10px;				/* внешние отступы */
+	padding: 10px;
+	float: left;
+	width: 250px;				/* ширина блока */
+	display: table-cell; 		/* Задаем табличное отображение */
+	vertical-align: top;		/* Вертикальное выравнивание по верхней части */
 }
 .content {
-	border: 1px dashed blue;	/* граница */
-	margin: 10px;				/* внешние отступы */	
+	padding: 10px;
+	width: auto;
+	display: table-cell; 		/* Задаем табличное отображение */
+	vertical-align: top;		/* Вертикальное выравнивание по верхней части */
 }
 
 .footer {
-	border: 1px dashed green;	/* граница */
-	margin: 10px;				/* внешние отступы */
+	background-color: #cccccc;
+	height: 150px;
+	padding: 10px;
 }
