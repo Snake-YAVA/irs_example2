@@ -1,0 +1,109 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.header {
+	position: relative;			/* относительное позиционирование */	
+	height: 250px;				/* высота блока */
+    background: url(https://orig00.deviantart.net/424a/f/2016/027/e/2/wallpaper_geometric_color_22_2k_uhd_by_airworldking-d9pj983.png);	
+}
+
+ul.main-menu {					/* главное меню */
+	position: absolute;			/* абсолютное позиционирование */
+    bottom: 10px;				/* позиция снизу */
+}
+
+ul.main-menu li {
+	list-style: none;
+	position: relative;			/* Относительное позиционирование */
+}
+
+ul.main-menu > li {				/* ко всем элементам списка */	
+    display: inline-block;		/* выстроит элементы горизонтально*/
+}
+
+ul.main-menu > li:hover > ul {	/* при наведение на элемент 1го уровня показать подменю */
+	display: block;				/* показать элемент */
+} 
+ul.main-menu > li > ul > li:hover > ul {	/* при наведение на элемент 2го уровня показать подменю */
+	display: block;				/* показать элемент */
+} 
+
+ul.main-menu > li > a {
+	background-color: white;	/* цвет фона */
+}
+ul.main-menu > li a {			/* ссылка меню 1го уровня */
+    padding: 10px;				/* внутренний отступ */
+    /*border-radius: 7px;	*/	/* закругление краёв */
+    text-decoration: none;		/* убрать подчёркивание */
+    color: black;				/* цвет текста */
+}
+ul.main-menu li a:hover {		/* при наведении мыши */
+	background-color: black;	/* цвет фона */
+	color: white;				/* цвет текста */
+}
+
+
+/* все подменю */
+ul.main-menu > li ul {
+	padding-left: 0px;
+	display: none;				/* скрываем подменю */
+}
+/* Меню второго уровня: */
+ul.main-menu > li > ul {
+	position: absolute;
+	top: 26px;
+	left: 0px;
+	background-color: #ccc;
+} 
+
+ul.main-menu > li > ul > li a {
+    display: block;							/* делаем ссылку блочным элементы */
+    width: 100%;							/* ширина блока */	
+    padding: 15px;							/* отступы */
+    box-sizing: border-box;					/* ширина блока суммарно будет включать все отсупы*/
+}
+/* ---------------------*/
+
+/* Меню третьего уровня: */
+ul.main-menu > li > ul > li > ul {
+	position: absolute;						/* абсолютно позиционируем */
+	left: 100%;								
+	top: 0px;
+	background-color: #666;			/* цвет фона */
+} 
+ul.main-menu > li > ul > li > ul > li {}
+ul.main-menu > li > ul > li > ul > li > a {}
+/* ---------------------*/
+
+img.logo {						/* логотип */
+    position: absolute;			/* абсолютное позиционирование */
+    left: 50%;					/* позиция слева на половину экрана */
+    top: 5px;					/* позиция сверху */
+    margin-left: -89px;			/* отрицательный отсуп*/
+}
+
+
+.middle {
+	width: 100%;
+	display: table; 				/* Задаем табличное отображение */
+}
+.left-block {
+	padding: 10px;
+	float: left;
+	width: 250px;				/* ширина блока */
+	display: table-cell; 		/* Задаем табличное отображение */
+	vertical-align: top;		/* Вертикальное выравнивание по верхней части */
+}
+.content {
+	padding: 10px;
+	width: auto;
+	display: table-cell; 		/* Задаем табличное отображение */
+	vertical-align: top;		/* Вертикальное выравнивание по верхней части */
+}
+
+.footer {
+	background-color: #cccccc;
+	height: 150px;
+	padding: 10px;
+}
